@@ -1,0 +1,32 @@
+
+.tab {
+    max-height: 430px; 
+    overflow-y: scroll; 
+    
+    h1, h2, h3, h4, h5, h6, 
+    p, label, table, tr, td, div, a {
+        color: $gray5;
+    }
+    a {
+        color: #fff !important;
+    }
+    label {
+        color: $gray5;
+        font-style: normal !important;
+    } 
+    .form-controls-container {
+        min-height: 315px; 
+        .custom-control.custom-switch {
+            margin-bottom: 0.3rem;
+        }
+        .file-input-container {
+            margin-top: 1rem;
+        }
+    }
+    .form-actions-container {
+        margin-bottom: 0px;
+    }
+    .table {
+        font-size: 16px;
+    }
+}

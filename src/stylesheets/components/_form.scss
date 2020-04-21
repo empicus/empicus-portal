@@ -1,0 +1,338 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    .form-actions-container {
+        padding: 0.5rem;
+    }
+    .form-actions-container {
+        padding: 0.5rem;
+    }
+  .form-row {
+      position: relative;
+      label {
+          top: -15px;
+          color: #2a2e35;
+          font-style: normal;
+          font-weight: bold;
+          text-transform: uppercase;
+          background-color: #fff !important;
+      }
+  
+      input {
+          width: 100%;
+          height: 60px;
+          font-family: "Montserrat","Arial",sans-serif;
+          font-weight: 300;
+          font-size: 16px;
+          font-size: 1rem;
+          padding-left: 25px;
+          padding-right: 25px;
+          display: block;
+          border: 2px solid #ced4da;
+  
+      }
+      .form-control {
+          margin-bottom: 20px !important;
+          border-radius: 0px;
+          height: calc(1.5em + .75rem + 20px);
+          background-color: #fff !important;
+      }
+      
+  }
+
+  width: 100%;
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  textarea {
+      padding-left: 25px;
+      padding-right: 25px;
+      border: 2px solid #ced4da;
+  }
+  input[type="date"]::-moz-placeholder,
+  input[type="datetime"]::-moz-placeholder,
+  input[type="datetime-local"]::-moz-placeholder,
+  input[type="email"]::-moz-placeholder,
+  input[type="month"]::-moz-placeholder,
+  input[type="number"]::-moz-placeholder,
+  input[type="password"]::-moz-placeholder,
+  input[type="search"]::-moz-placeholder,
+  input[type="tel"]::-moz-placeholder,
+  input[type="text"]::-moz-placeholder,
+  input[type="time"]::-moz-placeholder,
+  input[type="url"]::-moz-placeholder,
+  input[type="week"]::-moz-placeholder,
+  textarea::-moz-placeholder {
+      opacity: 1;
+      font-style: normal;
+      font-weight: 300;
+      color: #919295
+  }
+  input[type="date"]::-webkit-input-placeholder,
+  input[type="datetime"]::-webkit-input-placeholder,
+  input[type="datetime-local"]::-webkit-input-placeholder,
+  input[type="email"]::-webkit-input-placeholder,
+  input[type="month"]::-webkit-input-placeholder,
+  input[type="number"]::-webkit-input-placeholder,
+  input[type="password"]::-webkit-input-placeholder,
+  input[type="search"]::-webkit-input-placeholder,
+  input[type="tel"]::-webkit-input-placeholder,
+  input[type="text"]::-webkit-input-placeholder,
+  input[type="time"]::-webkit-input-placeholder,
+  input[type="url"]::-webkit-input-placeholder,
+  input[type="week"]::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+      opacity: 1;
+      font-style: normal;
+      font-weight: 300;
+      color: #919295
+  }
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="month"],
+  input[type="week"] {
+      color: #919295
+  }
+  textarea {
+      min-height: 200px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      resize: none
+  }
+  input[disabled],
+  textarea[disabled],
+  select[disabled='disabled'] {
+      -webkit-text-fill-color: #a8acad;
+      -webkit-opacity: 1;
+      color: #a8acad;
+      background: #a8acad
+  }
+  input[disabled] {
+/*                     background: url("../img/icons/disabled-lock.svg") right 20px center/22px no-repeat;
+*/                    border-color: #e7e8e8;
+      color: #919295
+  }
+  label {
+      display: block;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-size: .875rem;
+      letter-spacing: 1px;
+      line-height: 140%
+  }
+  .form-row label:not(.form-row__label--alt):not(.checkbox-container__label):not(.form-check-label),
+  .gfield_label:not(.gfield_label--alt) {
+      position: absolute;
+      left: 15px;
+      padding-bottom: 10px;
+      /* background: #fff; */
+      padding: 0 5px
+  }
+  .form-row__label--alt,
+  .gfield_label--alt {
+      padding-bottom: 10px
+  }
+  .form-row {
+      position: relative;
+
+      .btn, button, input[type="submit"], 
+      input[type="reset"] {
+          padding: 18px 24px;
+          display: inline-block;
+          cursor: pointer;
+          border: none;
+          border-radius: 0;
+          background: #ff8d00;
+          font-family: "Montserrat","Arial",sans-serif;
+          font-weight: 700;
+          text-align: center;
+          color: #fff;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+      }
+      select {
+          border: 2px solid #ced4da
+      }
+  }
+  .form-row--filters.has-more-items .form-row__inner {
+      margin-bottom: 15px
+  }
+  .form-row--filters .form-row__expand {
+      width: 100%;
+      font-size: 14px;
+      font-size: .875rem;
+      cursor: pointer;
+      color: #fff
+  }
+  .form-row__child {
+      display: none;
+      margin-left: 10px;
+      padding-left: 10px;
+      border-left: 2px solid #4a5158
+  }
+  .form-row__child+*,
+  *+.form-row__child,
+  .checkbox-container+*,
+  *+.checkbox-container {
+      margin-top: 10px
+  }
+  .form-row__desc,
+  .gfield_description {
+      font-weight: 600;
+      font-size: 11px;
+      font-size: .6875rem;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-top: 5px
+  }
+  .validation_error,
+  .gform_confirmation_message {
+      max-width: 540px;
+      margin: 0 auto;
+      padding: 40px;
+      text-align: center;
+      color: #fff;
+      line-height: 140%;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1.5px
+  }
+  .validation_error {
+      margin-bottom: 30px;
+      background: #ff7200
+  }
+  .gform_confirmation_message {
+      background: #111922
+  }
+  .gfield_error input,
+  .gfield_error textarea,
+  .gfield_error .jcf-select-text,
+  .gfield_error.jcf-file,
+  .gfield_error .jcf-file,
+  .form__field--validation input,
+  .form__field--validation textarea,
+  .form__field--validation .jcf-select-text,
+  .form__field--validation.jcf-file,
+  .form__field--validation .jcf-file,
+  .bg-dark .form__field--validation:nth-of-type(n) input,
+  .page-template-page-dark .page-main .form__field--validation:nth-of-type(n) input,
+  .bg-dark .form__field--validation:nth-of-type(n) textarea,
+  .page-template-page-dark .page-main .form__field--validation:nth-of-type(n) textarea,
+  .bg-dark .form__field--validation:nth-of-type(n) .jcf-select-text,
+  .page-template-page-dark .page-main .form__field--validation:nth-of-type(n) .jcf-select-text,
+  .bg-dark .form__field--validation:nth-of-type(n).jcf-file,
+  .page-template-page-dark .page-main .form__field--validation:nth-of-type(n).jcf-file,
+  .bg-dark .form__field--validation:nth-of-type(n) .jcf-file,
+  .page-template-page-dark .page-main .form__field--validation:nth-of-type(n) .jcf-file {
+      border-color: #ff7200
+  }
+  .gfield_error .jcf-select-text,
+  .gfield_error.jcf-file,
+  .gfield_error .jcf-file,
+  .form__field--validation .jcf-select-text,
+  .form__field--validation.jcf-file,
+  .form__field--validation .jcf-file,
+  .bg-dark .form__field--validation:nth-of-type(n) .jcf-select-text,
+  .page-template-page-dark .page-main .form__field--validation:nth-of-type(n) .jcf-select-text,
+  .bg-dark .form__field--validation:nth-of-type(n).jcf-file,
+  .page-template-page-dark .page-main .form__field--validation:nth-of-type(n).jcf-file,
+  .bg-dark .form__field--validation:nth-of-type(n) .jcf-file,
+  .page-template-page-dark .page-main .form__field--validation:nth-of-type(n) .jcf-file {
+      background-color: #ffefe8
+  }
+  .gfield_error .jcf-select .jcf-icon,
+  .gfield_error .select2-container .select2-choice .jcf-icon,
+  .select2-container .gfield_error .select2-choice .jcf-icon,
+  .form__field--validation .jcf-select .jcf-icon,
+  .form__field--validation .select2-container .select2-choice .jcf-icon,
+  .select2-container .form__field--validation .select2-choice .jcf-icon,
+  .bg-dark .form__field--validation:nth-of-type(n) .jcf-select .jcf-icon,
+  .page-template-page-dark .page-main .form__field--validation:nth-of-type(n) .jcf-select .jcf-icon,
+  .bg-dark .form__field--validation:nth-of-type(n) .select2-container .select2-choice .jcf-icon,
+  .select2-container .bg-dark .form__field--validation:nth-of-type(n) .select2-choice .jcf-icon,
+  .page-template-page-dark .page-main .form__field--validation:nth-of-type(n) .select2-container .select2-choice .jcf-icon,
+  .select2-container .page-template-page-dark .page-main .form__field--validation:nth-of-type(n) .select2-choice .jcf-icon {
+      stroke: #ff7200
+  }
+  .validation_message,
+  .form__validation {
+      position: absolute;
+      top: -18px;
+      width: 100%;
+      text-align: right;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 11px;
+      font-size: .6875rem;
+      color: #ff7200
+  }
+  .bg-dark input[type="date"],
+  .page-template-page-dark .page-main input[type="date"],
+  .bg-dark input[type="datetime"],
+  .page-template-page-dark .page-main input[type="datetime"],
+  .bg-dark input[type="datetime-local"],
+  .page-template-page-dark .page-main input[type="datetime-local"],
+  .bg-dark input[type="email"],
+  .page-template-page-dark .page-main input[type="email"],
+  .bg-dark input[type="month"],
+  .page-template-page-dark .page-main input[type="month"],
+  .bg-dark input[type="number"],
+  .page-template-page-dark .page-main input[type="number"],
+  .bg-dark input[type="password"],
+  .page-template-page-dark .page-main input[type="password"],
+  .bg-dark input[type="search"],
+  .page-template-page-dark .page-main input[type="search"],
+  .bg-dark input[type="tel"],
+  .page-template-page-dark .page-main input[type="tel"],
+  .bg-dark input[type="text"],
+  .page-template-page-dark .page-main input[type="text"],
+  .bg-dark input[type="time"],
+  .page-template-page-dark .page-main input[type="time"],
+  .bg-dark input[type="url"],
+  .page-template-page-dark .page-main input[type="url"],
+  .bg-dark input[type="week"],
+  .page-template-page-dark .page-main input[type="week"],
+  .bg-dark textarea,
+  .page-template-page-dark .page-main textarea {
+      background: #1d252d;
+      border-color: rgba(255, 255, 255, 0.2);
+      color: #fff
+  }
+  .bg-dark label,
+  .page-template-page-dark .page-main label,
+  .bg-dark .form-row label:nth-of-type(n),
+  .page-template-page-dark .page-main .form-row label:nth-of-type(n) {
+      color: #fff;
+      background: #1d252d
+  }
+  .bg-dark .checkbox-container label,
+  .page-template-page-dark .page-main .checkbox-container label {
+      color: #fff
+  }
+  .form__section-spinner {
+      width: 30px;
+      display: block;
+      margin: 0 auto
+  }
+  .form__section-spinner svg circle {
+      stroke: #ff8d00
+  }
+
+  
+  .form-actions-container {
+      margin-top: 40px;
+      display: flex;
+  }
+}

@@ -1,0 +1,20 @@
+<app-content-info-form-container 
+    [initData]="initData" 
+    *ngIf="uiController['wizardStep'] == uiController['COW_START_STATE'] || 
+    uiController['wizardStep'] == uiController['COW_INFO_STATE'] ">
+</app-content-info-form-container>
+
+<app-content-details-form-container 
+    [initData]="initData" 
+    *ngIf="uiController['wizardStep'] == uiController['COW_DETAILS_STATE']">
+</app-content-details-form-container>
+
+<app-content-data-form-container 
+    [initData]="initData" 
+    *ngIf="uiController['wizardStep'] == uiController['COW_DATA_STATE']">
+</app-content-data-form-container>
+
+<app-content-invoice-form-container 
+    [initData]="initData" 
+    *ngIf="uiController['wizardStep'] == uiController['COW_INVOICE_STATE']">
+</app-content-invoice-form-container>

@@ -1,0 +1,14 @@
+<app-generic-modal-container>
+    <!-- <div modal-header>Login</div> -->
+    <div modal-body>
+        <section id="login-auth-section" class="container auth-section section">
+            <div class="section-body-container">
+                <app-paypal-checkout-widget 
+                    [paymentData]="paymentData"
+                    (eventEmitter)="onPaymentEvent($event)">
+                </app-paypal-checkout-widget>
+            </div>
+        </section>
+    </div>
+    <!-- <div modal-footer>Login footer</div> -->
+</app-generic-modal-container>

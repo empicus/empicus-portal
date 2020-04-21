@@ -1,0 +1,109 @@
+<div class="orderform-layout-container">
+    <div class="form-container slide-left fade-in">
+        <form [formGroup]="uiController.form" (ngSubmit)="uiController.submit()">
+            <div class='fields-wrap form-controls-container'>
+                <!--  -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" checked class="custom-control-input"
+                                id="{{uiController.data.fieldData['includeSummary'].name}}"
+                                formControlName="{{uiController.data.fieldData['includeSummary'].name}}">
+                            <label class="custom-control-label"
+                                for="{{uiController.data.fieldData['includeSummary'].name}}">
+                                {{uiController.data.fieldData['includeSummary'].description}}
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" checked class="custom-control-input"
+                                id="{{uiController.data.fieldData['includePlagReport'].name}}"
+                                formControlName="{{uiController.data.fieldData['includePlagReport'].name}}">
+
+                            <label class="custom-control-label"
+                                for="{{uiController.data.fieldData['includePlagReport'].name}}">
+                                {{uiController.data.fieldData['includePlagReport'].description}}
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" checked class="custom-control-input"
+                                id="{{uiController.data.fieldData['includeEditorCheck'].name}}"
+                                formControlName="{{uiController.data.fieldData['includeEditorCheck'].name}}">
+
+                            <label class="custom-control-label"
+                                for="{{uiController.data.fieldData['includeEditorCheck'].name}}">
+                                {{uiController.data.fieldData['includeEditorCheck'].description}}
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" checked class="custom-control-input"
+                                id="{{uiController.data.fieldData['includeSourcesCopy'].name}}"
+                                formControlName="{{uiController.data.fieldData['includeSourcesCopy'].name}}">
+
+                            <label class="custom-control-label"
+                                for="{{uiController.data.fieldData['includeSourcesCopy'].name}}">
+                                {{uiController.data.fieldData['includeSourcesCopy'].description}}
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" checked class="custom-control-input"
+                                id="{{uiController.data.fieldData['includePrioritySupport'].name}}"
+                                formControlName="{{uiController.data.fieldData['includePrioritySupport'].name}}">
+
+                            <label class="custom-control-label"
+                                for="{{uiController.data.fieldData['includePrioritySupport'].name}}">
+                                {{uiController.data.fieldData['includePrioritySupport'].description}}
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row file-input-container">
+                    <div class="col-md-12">
+                        <div class="custom-file">
+                            <input id="validatedCustomFile" class="input custom-file-input" #documentInput type="file"
+                                formControlName="{{uiController.data.fieldData['document'].name}}" multiple>
+                            <label class="custom-file-label" for="validatedCustomFile">{{inputText}}</label>
+                            <div class="invalid-feedback">Example invalid custom file feedback</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div style="margin-top: 25px">
+                            <ul #documentIconContainer></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calc-lg-btn-group form-actions-container">
+                <a class="btn calc-lg-btn--qoute" (click)="uiController['transitionTo']('details')">
+                    Back
+                </a>
+                <button class="btn calc-lg-btn--order" [disabled]="uiController.form.invalid" type="submit">
+                    Continue
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

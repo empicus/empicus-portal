@@ -1,0 +1,59 @@
+@mixin portal-box-shadow {
+	box-shadow: 0 5px 5px 0 rgba(60, 75, 100, 0.6), 
+		0 5px 5px -1px rgba(60, 75, 100, 0.6), 
+		0 5px 5px 0 rgba(60, 75, 100, 0.6);
+}
+
+@mixin portal-gradient-bg($from_color, $to_color, $direction) {
+	background: $to_color;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to $direction, $from_color, $to_color);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to $direction, $from_color, $to_color); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+@mixin jumbotron-section-overlay($start_color, $end_color) {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin-right: -10px;
+	content: "";
+	opacity: .1;
+	background: $start_color;
+    max-height: 100vh !important;
+	background: linear-gradient(to right,$start_color 0,$end_color 100%);
+}
+
+@mixin jumbotron-section($bg_url) {
+	top: 0; 
+    left: 0; 
+    overflow-y: scroll;
+	position: fixed;
+    /* Preserve aspect ratio */
+    min-width: 100%;
+	min-height: 100%;
+	max-height: 100vh !important;
+
+	//background: linear-gradient(to right,rgb(236, 147, 74) 0, rgb(226, 113, 7) 100%);
+    background: url($bg_url) no-repeat center center fixed;
+    background-size: cover;
+}
+
+@mixin jumbotron-box($min_height, $z_index, $bg_color, $bg_alpha, $fg_color) {
+	min-height: $min_height;
+	z-index: $z_index !important;
+	background-color: rgba($color: $bg_color, $alpha: $bg_alpha);
+	h1, p {
+		color: $fg_color;
+	}
+}
+
+@mixin portal-landing-layout($bg_url, $min_height, $z_index, $bg_color, $bg_alpha, $fg_color) {
+	@include jumbotron-section($bg_url);
+	.jumbotron {
+		@include jumbotron-box($min_height, $z_index, $bg_color, $bg_alpha, $fg_color)
+	}
+}
+
+

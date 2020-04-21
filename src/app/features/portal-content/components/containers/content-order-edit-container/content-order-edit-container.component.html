@@ -1,0 +1,15 @@
+<section id="portal-internal-content" class="portal-section portal-internal-section">
+	<div class="section-content">
+		<!-- Basic Tables start -->
+		<div class="row">
+			<div class="col-12">
+				<!-- Responsive tables end -->
+				<content-order-edit-widget 
+					[entityData]="uiController.data" 
+					[config]="uiController['config']"
+					(eventEmitter)="uiController.onChildUiComponentEvent($event)">
+				</content-order-edit-widget>
+			</div>
+		</div>
+	</div>
+</section>

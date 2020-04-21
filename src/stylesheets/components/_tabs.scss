@@ -1,0 +1,71 @@
+/**
+ * Tabs
+ */
+.helion-tabs {
+	display: flex;
+	flex-wrap: wrap; // make sure it wraps
+}
+.helion-tabs label.tab-label {
+    order: 1; // Put the labels first
+    color: $gray6;
+    font-style: normal;
+	display: block;
+    padding: 1rem 2rem;
+    margin-top: 0px !important;
+    margin-right: 0.2rem;
+    margin-bottom: 0 !important;
+	cursor: pointer;
+	background: rgba(58, 56, 56, 0.205);
+    transition: background ease 0.2s;
+}
+.helion-tabs .tab {
+    order: 99; // Put the helion-tabs last
+    flex-grow: 1;
+	width: 100%;
+	display: block;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.helion-tabs input[type="radio"] {
+	display: none;
+}
+
+.helion-tabs input[type="radio"]:checked + label {
+    background: rgba(255, 255, 255, 0.8)
+}
+
+/* .helion-tabs input[type="radio"]:checked + label + .tab {
+	display: block;
+} */
+
+@media (max-width: 45em) {
+    .helion-tabs .tab,
+    .helion-tabs label.tab-label {
+        order: initial;
+    }
+    .helion-tabs label.tab-label {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 0.2rem;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  
+
+}

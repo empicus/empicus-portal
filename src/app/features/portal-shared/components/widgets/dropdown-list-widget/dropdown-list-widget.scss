@@ -1,0 +1,47 @@
+.calc-dropdown-wrap { 
+   width: 100%;
+
+   .display-value {
+       height: 39px;
+       display: flex;
+       background-color: #fb8122;
+   }
+   .value-text {
+       display: flex;
+       padding-left: 10px;
+       font-family: sans-serif;
+       align-items: center;
+       color: #fff;
+   }
+   .calc-dropdown-list {
+       width: 100%;
+       padding: 0px;
+       position: absolute;
+       /* visibility: hidden; */
+       margin: 0px;
+       height: fit-content;
+       height: 300px;
+       overflow-y: scroll;
+       z-index: 1000;
+       /* border: 2px solid #333; */
+       background-color: #fff;
+       list-style-type: none;
+       display: block;
+   }
+   .calc-dropdown-list:focus {
+       outline:none;
+   }
+   .calc-dropdown-item {
+       display: none;
+       height: 40px;
+       display: flex;
+       padding-left: 10px;
+       font-family: sans-serif;
+       align-items: center;
+       color: #666;
+   }
+   .calc-dropdown-item:hover {
+       background-color: #fb8122;
+       color: #fff;
+   }
+}

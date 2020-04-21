@@ -1,0 +1,58 @@
+<div class="form-container slide-left fade-in">
+    <form [formGroup]="uiController.form" (ngSubmit)="uiController.submit()">
+
+        <div class="orderform-layout-container">
+            <div class="orderform-invoice-header">
+                <div class="orderform-invoice-amount-container">
+                    <h4>Total:</h4>
+                    <h4>${{ uiController['cartData'].totalCost.toFixed(2) }}</h4>
+                </div>
+                <div class="orderform-invoice-text-container">
+                    <p class="lead"> 
+                        <span>Title:</span> {{ uiController['contentOrderWizardData'].title }}
+                    </p>
+                </div>
+            </div>
+            <div class="table-responsive orderform-invoice-body">
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <td>Content Type</td>
+                            <td>{{ uiController['contentOrderWizardData'].contentTypeTxt }}</td>
+                        </tr>
+                        <tr>
+                            <td>Writer Level</td>
+                            <td>{{ uiController['contentOrderWizardData'].writerLevelTxt }}</td>
+                        </tr>
+                        <tr>
+                            <td>Deadline</td>
+                            <td>{{ uiController['contentOrderWizardData'].deadLineTxt }}</td>
+                        </tr>
+                        <tr>
+                            <td>Word Count</td>
+                            <td>{{ uiController['contentOrderWizardData'].wordCount }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="orderform-invoice-footer">
+                <div>
+                    <!-- <div class="invoice-total-container">
+                        <div class="invoice-total-text">Total</div>
+                        <div class="invoice-total-amount">$200.00</div>
+                    </div> -->
+                    <div class="calc-lg-btn-group">
+                        <a class="btn btn-lg calc-lg-btn--qoute" (click)="uiController['transitionTo']('data')">
+                            Back
+                        </a>
+
+                        <button class="btn btn-lg  calc-lg-btn--order"
+                            [disabled]="uiController.form.invalid" type="submit">
+                            Next
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

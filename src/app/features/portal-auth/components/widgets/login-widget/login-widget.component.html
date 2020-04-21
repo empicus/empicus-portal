@@ -1,0 +1,44 @@
+<email-login show-signout="true" ng-version="9.0.0">
+    <!---->
+    <div>
+        <h3>Login</h3>
+        <p> No Account? <button class="btn btn-sm">Sign Up</button></p>
+    </div>
+    <!---->
+    <hr>
+    <form [formGroup]="uiController.form" (ngSubmit)="uiController.submit()" novalidate="" class="login-form ng-untouched ng-pristine ng-invalid">
+        <label for="email">Email</label>
+        <input type="email" formControlName="{{uiController.data.fieldData['userName'].name}}"
+            placeholder="{{uiController.data.fieldData['userName'].description}}"
+            [readonly]="uiController.data.fieldData['userName'].isReadOnly" class="input ng-untouched ng-pristine ng-invalid">
+        <div>
+            <label for="password">Password</label>
+            <input type="password" value="{{uiController.data.fieldData['password']?.value}}"
+            formControlName="{{uiController.data.fieldData['password'].name}}"
+            placeholder="{{uiController.data.fieldData['password'].description}}"
+            [readonly]="uiController.data.fieldData['password'].isReadOnly" required="" class="input ng-untouched ng-pristine ng-invalid">
+            <!---->
+            <!---->
+        </div>
+        <!---->
+        <hr>
+        <p class="red"></p>
+        <button type="submit" [disabled]="uiController.form.invalid" class="btn btn-blue">
+             login
+        </button>
+        <!---->
+        <!---->
+        <p class="btn btn-sm"> Forgot password? </p>
+        <!---->
+        <!---->
+    </form>
+    <p class="text-sm">
+        By signing up you agree to our <a href="https://fireship.io/terms">Terms of
+            Service</a>
+        and <a href="https://fireship.io/privacy-policy">Privacy Policy</a>. We'll send you
+        account-related
+        emails on rare occasions.</p>
+    <!---->
+    <!---->
+</email-login>   
+    

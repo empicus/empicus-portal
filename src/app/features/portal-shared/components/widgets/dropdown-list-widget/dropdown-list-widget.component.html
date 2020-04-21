@@ -1,0 +1,10 @@
+<div class="calc-dropdown-wrap">
+    <div *ngIf="showSelectedText" id="displayValue" class="display-value">
+        <span class="value-text" id="valueText">{{selectedText}}</span>
+    </div>
+    <ul *ngIf="showList" class="calc-dropdown-list" id="selectContainer" onblur="toggleOptions(event)">
+        <li *ngFor="let item of items"
+            class="calc-dropdown-item" 
+            (click)="selected(item)">{{item.fieldData['name'].value}}</li>
+    </ul>
+</div>

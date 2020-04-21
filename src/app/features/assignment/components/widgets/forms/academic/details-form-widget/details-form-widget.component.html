@@ -1,0 +1,141 @@
+<div class="form-container slide-left fade-in">
+    <form [formGroup]="uiController.form" (ngSubmit)="uiController.submit()">
+        <div class="row">
+            <div class="col-md-12">
+                <div class='fields-wrap'>
+
+                    <!-- Title fields -->
+                    <div class="form-row">
+                        <div class="col-md-12">
+                            <label for="{{uiController.data.fieldData['title'].name}}">
+                                {{uiController.data.fieldData['title'].description}}
+                            </label>
+                            <input type="text" class="form-control"
+                                id="{{uiController.data.fieldData['title'].name}}"
+                                formControlName="{{uiController.data.fieldData['title'].name}}"
+                                [readonly]="uiController.data.fieldData['title'].isReadOnly">
+                            <field-error-widget
+                                [fieldErrorData]="{ data: uiController.data.fieldData['title'], form: uiController.form }">
+                            </field-error-widget>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <!-- Type Of Service fields -->
+                            <label for="{{uiController.data.fieldData['disciple'].name">
+                                {{uiController.data.fieldData['disciple'].description}}
+                            </label>
+                            <select class="form-control"
+                                [formControl]="uiController.form.controls['disciple']">
+                                <option *ngFor="let discipline of uiController['disciples']" 
+                                    [value]="discipline.itemValue">
+                                    {{ discipline.itemText }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Academic Level field -->
+                            <label for="{{uiController.data.fieldData['academicStyle'].name}}">
+                                {{uiController.data.fieldData['academicStyle'].description}}
+                            </label>
+                            <select class="form-control"
+                                [formControl]="uiController.form.controls['academicStyle']">
+                                <option *ngFor="let academicStyle of uiController['academicStyles']" 
+                                    [value]="academicStyle.itemValue">
+                                    {{ academicStyle.itemText }}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <!-- Type Of Service fields -->
+                            <label for="{{uiController.data.fieldData['writerLevel'].name">
+                                {{uiController.data.fieldData['writerLevel'].description}}
+                            </label>
+                            <select class="form-control"
+                                [formControl]="uiController.form.controls['writerLevel']">
+                                <option *ngFor="let writerLevel of uiController['writerLevels']" 
+                                    [value]="writerLevel.itemValue">
+                                    {{ writerLevel.itemText }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="{{uiController.data.fieldData['sourceCount'].name}}">
+                                {{uiController.data.fieldData['sourceCount'].description}}
+                            </label>
+                            <input type="number" class="form-control" min="0"
+                                value="{{uiController.data.fieldData['sourceCount']?.value}}"
+                                formControlName="{{uiController.data.fieldData['sourceCount'].name}}"
+                                [readonly]="uiController.data.fieldData['sourceCount'].isReadOnly">
+                            <field-error-widget
+                                [fieldErrorData]="{ data: uiController.data.fieldData['sourceCount'], form: uiController.form }">
+                            </field-error-widget>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <!-- Type Of Service fields -->
+                            <label for="{{uiController.data.fieldData['lineSpacing'].name">
+                                {{uiController.data.fieldData['lineSpacing'].description}}
+                            </label>
+                            <select class="form-control"
+                                [formControl]="uiController.form.controls['lineSpacing']">
+                                <option *ngFor="let spacing of uiController['lineSpacing']" 
+                                    [value]="spacing.itemValue">
+                                    {{ spacing.itemText }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="{{uiController.data.fieldData['pageCount'].name}}">
+                                {{uiController.data.fieldData['pageCount'].description}}
+                            </label>
+                            <input type="number" class="form-control" min="0"
+                                value="{{uiController.data.fieldData['pageCount']?.value}}"
+                                formControlName="{{uiController.data.fieldData['pageCount'].name}}"
+                                [readonly]="uiController.data.fieldData['pageCount'].isReadOnly">
+                            <field-error-widget
+                                [fieldErrorData]="{ data: uiController.data.fieldData['pageCount'], form: uiController.form }">
+                            </field-error-widget>
+                        </div>
+                    </div>
+
+                    <!-- Details fields -->
+                    <div class="form-row">
+                        <div class="col-md-12">
+                            <!-- No fields -->
+                            <label for="{{uiController.data.fieldData['paperDetails'].name}}">
+                                {{uiController.data.fieldData['paperDetails'].description}}
+                            </label>
+                            <textarea class="md-textarea form-control"
+                                formControlName="{{uiController.data.fieldData['paperDetails'].name}}"></textarea>
+                            <field-error-widget
+                                [fieldErrorData]="{ data: uiController.data.fieldData['paperDetails'], form: uiController.form }">
+                            </field-error-widget>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: block;">
+            <div>
+                <div class="calc-lg-btn-group">
+                    <a class="btn calc-lg-btn--qoute" (click)="uiController['transitionTo']('info')">
+                        Back
+                    </a>
+
+                    <button class="btn calc-lg-btn--order"
+                        [disabled]="uiController.form.invalid" type="submit">
+                        Next
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

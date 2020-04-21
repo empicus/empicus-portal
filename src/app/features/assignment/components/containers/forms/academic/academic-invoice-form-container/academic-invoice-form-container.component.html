@@ -1,0 +1,6 @@
+<app-invoice-form-widget 
+    [entityData]="uiController.data" 
+    [initData]="initData"
+    [config]="uiController['config']"
+    (eventEmitter)="uiController.onChildUiComponentEvent($event)">
+</app-invoice-form-widget>

@@ -1,0 +1,86 @@
+<nav class="topnav" style="top: 0px;">
+   <!--  <span slot="falsey">
+        <div class="item item-pro">
+            <a href="https://fireship.io/pro">
+                Home
+            </a>
+        </div>
+    </span> -->
+
+    <div class="item blue-bg item-first">
+        <a routerLink="/home">
+            Home
+        </a>
+    </div>
+
+    <div class="item purple-bg">
+        <a href="https://fireship.io/pro">
+            Order Now
+        </a>
+    </div>
+
+    <div *ngIf="!uiController['authenticationData']?.isUserAuthenticated" class="item pink-bg">
+        <a routerLink="/auth/main/login">
+            Sign In
+        </a>
+    </div>
+
+    <div *ngIf="!uiController['authenticationData']?.isUserAuthenticated" class="item orange-bg">
+        <a routerLink="/auth/main/signup">
+            Sign Up
+        </a>
+    </div>
+
+    <div *ngIf="uiController['authenticationData']?.isUserAuthenticated" class="item pink-bg">
+        <a routerLink="/portal-academic/pending">
+            My Account
+        </a>
+    </div>
+
+
+    <div *ngIf="uiController['authenticationData']?.isUserAuthenticated" class="item orange-bg">
+        <a (click)="uiController['logout']($event)">
+            Logout
+        </a>
+    </div>
+
+    <div id="mega" class="mega-menu">
+        <div class="mega-main">
+            <section>
+                <h3>Content</h3>
+                <ul>
+                    <li><a href="https://fireship.io/lessons">Video Lessons</a></li>
+                    <li><a href="https://fireship.io/courses">Full Courses</a></li>
+                    <li><a href="https://fireship.io/snippets">Quick Snippets</a></li>
+                    <li><a href="https://fireship.io/tags">#tags</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>People</h3>
+                <ul>
+                    <li><a href="https://fireship.io/mission">Manifesto</a></li>
+                    <li><a href="https://fireship.io/contributors">Contributors</a></li>
+                    <li><a href="https://fireship.io/about">About</a></li>
+                    <li><a href="https://fireship.io/login">Login</a></li>
+                    <li><a href="https://fireship.page.link/slack">Slack Chat</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Tags</h3>
+                <ul>
+                    <li><a href="https://fireship.io/tags/angular">#angular</a></li>
+                    <li><a href="https://fireship.io/tags/flutter">#flutter</a></li>
+                    <li><a href="https://fireship.io/tags/firebase">#firebase</a></li>
+                    <li><a href="https://fireship.io/tags/stripe">#stripe</a></li>
+                </ul>
+            </section>
+        </div>
+        <div class="row mega-footer">
+            <span>Fireship.io</span> <a href="https://fireship.io/terms">terms</a> <a
+                href="https://fireship.io/privacy-policy">privacy</a> <a href="https://fireship.io/style-guide">style
+                guide</a>
+        </div>
+    </div>
+</nav>

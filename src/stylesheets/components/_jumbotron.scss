@@ -1,0 +1,23 @@
+.jumbotron {
+    position: relative;
+    padding: 0 !important;
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    .jumbotron {
+        padding-top: 3.6rem !important;
+        .jumbotron-items-container {
+            padding: 0;
+            display: flex;
+            flex-direction: row-reverse !important;
+            min-height: 470px;
+            .jumbotron-text-container {
+                .col-md-6:last-child {
+                    padding-left: 10px !important;
+                }
+            }
+            .jumbotron-form-container {
+            }
+        }
+    }
+}

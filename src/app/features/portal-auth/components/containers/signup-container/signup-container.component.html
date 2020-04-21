@@ -1,0 +1,8 @@
+
+<div class="login-wrapper">
+    <signup-widget 
+        [entityData]="uiController.data" 
+        [config]="uiController['config']"
+        (eventEmitter)="uiController.onChildUiComponentEvent($event)">
+    </signup-widget>
+</div>

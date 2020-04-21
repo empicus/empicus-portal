@@ -1,0 +1,78 @@
+<div class="form-container">
+    <form [formGroup]="uiController.form" (ngSubmit)="uiController.submit()">
+        <div class="row">
+            <div class="col-md-12">
+                <div class='fields-wrap'>
+                    <div class="form-row group">
+                        <div class="col-md-12">
+                            <!-- Academic Level field -->
+                            <label for="{{uiController.data.fieldData['contentType'].name}}">
+                                {{uiController.data.fieldData['contentType'].description}}
+                            </label>
+                            <select class="form-control"
+                                [formControl]="uiController.form.controls['contentType']">
+                                <option *ngFor="let contentType of uiController['contentTypes']" 
+                                    [value]="contentType.itemValue">
+                                    {{ contentType.itemText }}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Title fields -->
+                    <div class="form-row group">
+                        <div class="col-md-12">
+                            <label for="{{uiController.data.fieldData['title'].name}}">
+                                {{uiController.data.fieldData['title'].description}}
+                            </label>
+                            <input type="text" class="form-control" id="{{uiController.data.fieldData['title'].name}}"
+                                formControlName="{{uiController.data.fieldData['title'].name}}"
+                                [readonly]="uiController.data.fieldData['title'].isReadOnly">
+                            <field-error-widget
+                                [fieldErrorData]="{ data: uiController.data.fieldData['title'], form: uiController.form }">
+                            </field-error-widget>
+                        </div>
+                    </div>
+
+                    <div class="form-row group">
+                        <div class="col-md-12">
+                            <label for="{{uiController.data.fieldData['keyWords'].name}}">
+                                {{uiController.data.fieldData['keyWords'].description}}
+                            </label>
+                            <input type="text" class="form-control" id="{{uiController.data.fieldData['keyWords'].name}}"
+                                formControlName="{{uiController.data.fieldData['keyWords'].name}}"
+                                [readonly]="uiController.data.fieldData['keyWords'].isReadOnly">
+                            <field-error-widget
+                                [fieldErrorData]="{ data: uiController.data.fieldData['keyWords'], form: uiController.form }">
+                            </field-error-widget>
+                        </div>
+                    </div>
+            
+
+                    <div class="form-row">
+                        <div class="col-md-12">
+                            <div class="cl-select-title">Deadline:</div>
+                            <range-item-widget [items]="uiController['deadLineRangeItems']" 
+                                (eventEmitter)="uiController['cowCalculate']($event, 'deadLine')">
+                            </range-item-widget>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div style="display: block;">
+                            <div class="calc-lg-btn-group">
+                                <button class="btn btn-lg btn-block calc-lg-btn--order" [disabled]="uiController.form.invalid"
+                                    type="submit">
+                                    Next
+                                </button>
+                            </div>
+                        </div>
+                        <div></div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

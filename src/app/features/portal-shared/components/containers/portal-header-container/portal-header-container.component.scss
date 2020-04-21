@@ -1,0 +1,32 @@
+.topnav .item {
+	width: 120px;
+    max-width: 200px;
+    height: 60px !important;
+    a {
+        display: block;
+        color: #fff !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+/* .item-first {
+    border-bottom-left-radius: 50%;
+} */
+
+
+
+@media screen and (min-width: 1400px) {
+    .topnav .item {
+        width: 200px;
+    }
+
+}
+@media screen and (min-width: 1600px) {
+
+}
+@media screen and (min-width: 1900px) {
+
+}
+

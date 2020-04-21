@@ -1,0 +1,98 @@
+<section class="content-article" itemprop="articleBody">
+    <header>
+        <div class="post-info">
+            <div class="post-description">
+                <h2>
+                    ${{artifactData?.fieldData['total'].value}}
+                </h2>
+                <div class="text-sm">
+                    <span class="tag">
+                        Created: <time itemprop="dateModified">
+                            {{artifactData?.fieldData['createdDt'].value | date: 'dd/MM/yyyy'}}
+                        </time>
+                    </span>
+                    <br>
+                    <span class="tag">
+                        Due Date: <time itemprop="dateModified">
+                            {{artifactData?.fieldData['dueDt'].value | date: 'dd/MM/yyyy'}}
+                        </time>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="post-detail">
+                <div class="post-buttons">
+                    <a class="btn btn-purple" href="https://fireship.page.link/slack">
+                        Invoice: {{artifactData?.fieldData['code'].value}}
+                    </a>
+                </div>
+
+                <div class="post-tags">
+                    <a class="btn btn-contrast" href="https://fireship.page.link/slack">
+                        Paper Status: {{artifactData?.fieldData['statusId'].value['name']}}
+                    </a>
+                </div>
+                <div class="post-tags">
+                    <a href="https://fireship.io/tags/angular">
+                        <span class="tag tag-sm tag-angular">
+                            {{artifactData?.fieldData['academicStyleItem'].value.fieldData['description'].value}}
+                        </span>
+                    </a>
+
+                    <a href="https://fireship.io/tags/react">
+                        <span class="tag tag-sm tag-react">
+                            {{artifactData?.fieldData['pageCount'].value}} Pages
+                        </span>
+                    </a>
+
+                    <a href="https://fireship.io/tags/vue">
+                        <span class="tag tag-sm tag-vue">
+                            {{artifactData?.fieldData['academicLevelItem'].value.fieldData['description'].value}}
+                        </span>
+                    </a>
+
+                    <a href="https://fireship.io/tags/payments">
+                        <span class="tag tag-sm tag-payments">
+                            {{artifactData?.fieldData['lineSpacing'].value}} Pages
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="content-body">
+        <h2 id="live-demo">Title</h2>
+        <p>
+            {{artifactData?.fieldData['title'].value}}
+        </p>
+
+        <h2 id="live-demo">Description</h2>
+        <p>
+            {{artifactData?.fieldData['description'].value}}
+        </p>
+        <h2 id="live-demo">Files</h2>
+        <nav class="chapters-list">
+            <ng-container *ngFor="let document of artifactData?.fieldData['documents'].value">
+                <a href="https://api.brainboxessays.com/ws/andromeda-upload/download/{{document?.fieldData['code'].value}}"  >
+                    <div class="box box-sm chapter-item ">
+                        <i class="box-icon">
+                            <div>
+                                <i class="emoji">📜</i>
+                            </div>
+                        </i>
+                        <div class="box-content">
+                            <!-- <strong>1 Resources</strong> -->
+                            <span class="subtext">{{ document?.fieldData['name'].value }}</span>
+                        </div>
+                        <!-- <div class="video-labels">
+                            <span class="tag tag-sm">1:44</span>
+                        </div> -->
+                    </div>
+                </a>
+            </ng-container>
+        </nav>
+    </div>
+</section>
+
+

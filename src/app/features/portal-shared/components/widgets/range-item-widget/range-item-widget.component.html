@@ -1,0 +1,74 @@
+<div class="cl-range-wrap">
+        <ul class="cl-range">
+            <li *ngFor="let item of items" (click)="selectItem(item)"
+                [ngClass]="{'active': item.itemActive, 'cl-range-item': true }">
+                <div class="cl-range-item__circle">
+                    <div class="cl-range-popup">
+                        <span class="cl-range-popup__text">{{item.itemText}}</span>
+                    </div>
+                </div> 
+            </li>
+            <!-- <li class="cl-range-item" (click)="selectDate('10D')">
+                <div class="cl-range-item__circle">
+                    <div class="cl-range-popup">
+                        <span class="cl-range-popup__text">10 days</span></div>
+                </div>
+            </li>
+            <li class="cl-range-item" (click)="selectDate('7D')">
+                <div class="cl-range-item__circle">
+                    <div class="cl-range-popup">
+                        <span class="cl-range-popup__text">7 days</span>
+                    </div>
+                </div>
+            </li>
+            <li class="cl-range-item" (click)="selectDate('5D')">
+                <div class="cl-range-item__circle">
+                    <div class="cl-range-popup">
+                        <span class="cl-range-popup__text">5 days</span>
+                    </div>
+                </div>
+            </li>
+            <li class="cl-range-item" (click)="selectDate('3D')">
+                <div class="cl-range-item__circle">
+                    <div class="cl-range-popup">
+                        <span class="cl-range-popup__text">3 days</span>
+                    </div>
+                </div>
+            </li>
+            <li class="cl-range-item" (click)="selectDate('2D')">
+                <div class="cl-range-item__circle">
+                    <div class="cl-range-popup">
+                        <span class="cl-range-popup__text">2 days</span>
+                    </div>
+                </div>
+            </li>
+            <li class="cl-range-item" (click)="selectDate('24H')">
+                <div class="cl-range-item__circle">
+                    <div class="cl-range-popup">
+                        <span class="cl-range-popup__text">24 hours</span>
+                    </div>
+                </div>
+            </li>
+            <li class="cl-range-item" (click)="selectDate('12D')">
+                <div class="cl-range-item__circle">
+                    <div class="cl-range-popup">
+                        <span class="cl-range-popup__text">12 hours</span>
+                    </div>
+                </div>
+            </li>
+            <li class="cl-range-item" (click)="selectDate('6H')">
+                <div class="cl-range-item__circle">
+                    <div class="cl-range-popup">
+                        <span class="cl-range-popup__text">6 hours</span>
+                    </div>
+                </div>
+            </li>
+            <li class="cl-range-item" (click)="selectDate('3H')">
+                <div class="cl-range-item__circle">
+                    <div class="cl-range-popup">
+                        <span class="cl-range-popup__text">3 hours</span>
+                    </div>
+                </div>
+            </li> -->
+        </ul>
+    </div>
