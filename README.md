@@ -1,32 +1,50 @@
-# ClientHomeNg
+# Empicus Portal
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+Frontend web application for the Empicus infectious disease case management and collaboration platform. This application
+is composed of the following modules:
 
-## Modules
-    1. Portal
-    2. About
-    3. Services
-    4. Blog
-    5. Contact
-    6. Questions
-## Pages
-    1. Landing
-    2. About
-    3. Services Landing
-    4. Services Single
-    5. FAQ
-    6. Blog Landing
-    7. Blog Single
-    8. Contact
-    9. Questions Landing
-    10. Questions Single
+1. Home
+2. About
+3. Blog
+4. Contact
+5. Search
+6. Social Media
+7. Donate
+8. Portal
+9. Portal Shared
+10. Portal Auth
+11. Portal User
+12. Portal Pathogen
+13. Portal Disease
+14. Portal Disease Case
+15. Portal Disease Contact
+16. Portal Topic
+17. Portal Project
+18. Portal Post (Post location)
+19. Portal Conversation
+20. Portal Report
 
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-## Code scaffolding
+### Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+You will need to install the angular cli.
+
+```
+npm install -g @angular/cli
+```
+
+### Installing
+
+Just clone this repository.
+
+```
+git clone git@github.com:empicus/empicus-portal-ng.git
+```
+
+The change into the project directory and run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
@@ -40,6 +58,24 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+End with an example of getting some data out of the system or using it for a little demo
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Built With
+
+* [Angular](http://www.angular.io) - The web framework used
+* [NPM](https://npm.org/) - Dependency Management
+
+
+## Authors
+
+* **Edward Banfa** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Hat tip to anyone whose code was used
+* Inspiration
+* etc

@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PortalRoutingModule } from "./portal.routing.module";
 import { PortalSharedModule } from '../portal-shared/portal-shared.module';
-import { AssignmentModule } from '../assignment/assignment.module';
 import { PortalLandingContainerComponent } from './components/containers/portal-landing-container/portal-landing-container.component';
 import { PortalAuthModule } from '../portal-auth/portal-auth.module';
 import { PortalViewComponent } from '../portal-shared/components/views/portal-view/portal-view.component';
@@ -13,7 +12,6 @@ import { PortalViewComponent } from '../portal-shared/components/views/portal-vi
     PortalRoutingModule,
     PortalSharedModule,
     PortalAuthModule,
-    AssignmentModule
   ],
   declarations: [
     PortalViewComponent,

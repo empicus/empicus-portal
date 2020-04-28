@@ -1,0 +1,67 @@
+<div class="card">
+    <div class="card-header">
+        <h4 class="card-title">Topic</h4>
+        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+        <div class="heading-elements">
+            <ul class="list-inline mb-0">
+                <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                <li><a data-action="close"><i class="ft-x"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-content collapse show">
+        <div class="card-body">
+            <div class="card-text">
+                <p>Update the editable fields and then click submit.</p>
+            </div>
+            <form [formGroup]="uiController.form" (ngSubmit)="uiController.submit()" class="form">
+                <div class="form-body">
+
+
+                    <!-- Code fields -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input mdbInput type="text" class="form-control"
+                                    value="{{uiController.data.fieldData['code']?.value}}"
+                                    formControlName="{{uiController.data.fieldData['code'].name}}"
+                                    placeholder="{{uiController.data.fieldData['code'].description}}"
+                                    [readonly]="uiController.data.fieldData['code'].isReadOnly" required>
+                                <field-error-widget
+                                    [fieldErrorData]="{ data: uiController.data.fieldData['code'], form: uiController.form }">
+                                </field-error-widget>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Name fields -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input mdbInput type="text" class="form-control"
+                                    value="{{uiController.data.fieldData['name']?.value}}"
+                                    formControlName="{{uiController.data.fieldData['name'].name}}"
+                                    placeholder="{{uiController.data.fieldData['name'].description}}"
+                                    [readonly]="uiController.data.fieldData['name'].isReadOnly" required>
+                                <field-error-widget
+                                    [fieldErrorData]="{ data: uiController.data.fieldData['name'], form: uiController.form }">
+                                </field-error-widget>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn btn-primary" [disabled]="uiController.form.invalid" type="submit">
+                        <i class="la la-check-square-o"></i> Submit
+                    </button>
+                    <a class="btn btn-danger mr-1" routerLink="/portal-topic">
+                        <i class="ft-x"></i> Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

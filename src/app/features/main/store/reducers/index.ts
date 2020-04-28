@@ -14,10 +14,6 @@ import { uixReducer } from '../../../portal-shared/store/reducers/uix/uix.reduce
 import { UixState } from '../../../portal-shared/store/reducers/uix/uix.state';
 import { AuthenticationState } from '../../../portal-auth/store/reducers/auth/authentication.state';
 import { authenticationReducer } from '../../../portal-auth/store/reducers/auth/authentication.reducer';
-import { AcademicOrderWizardState } from '../../../assignment/store/reducers/academic-order-wizard/academic-order-wizard.state';
-import { academicOrderWizardReducer } from '../../../assignment/store/reducers/academic-order-wizard/academic-order-wizard.reducer';
-import { ContentOrderWizardState } from '../../../assignment/store/reducers/content-order-wizard/content-order-wizard.state';
-import { contentOrderWizardReducer } from '../../../assignment/store/reducers/content-order-wizard/content-order-wizard.reducer';
 import { ActionQueueState, actionQueueReducer } from 'helion-core';
 /**
  * State of application
@@ -29,8 +25,6 @@ export interface AppState {
     uixState: UixState,
     uiNotificationState: UiNotificationState,
     uiDialogState: UiDialogState,
-    academicOrderWizardState: AcademicOrderWizardState,
-    contentOrderWizardState: ContentOrderWizardState,
     routerReducer: fromNgrxRouter.RouterReducerState<routeReducer.RouterStateUrl>;
 }
 
@@ -44,8 +38,6 @@ export const appReducers: ActionReducerMap<AppState> = {
     uixState: uixReducer,
     uiDialogState: uiDialogReducer,
     uiNotificationState: uiNotificationReducer,
-    academicOrderWizardState: academicOrderWizardReducer,
-    contentOrderWizardState: contentOrderWizardReducer,
     routerReducer: fromNgrxRouter.routerReducer
 };
 

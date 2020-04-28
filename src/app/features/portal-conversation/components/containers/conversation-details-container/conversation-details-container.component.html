@@ -1,0 +1,20 @@
+<!-- BEGIN: Content-->
+<div class="app-content content">
+	<div class="content-wrapper">
+		<div class="content-wrapper-before"></div>
+		<portal-content-header-container></portal-content-header-container>
+		<div class="content-body">
+			<!-- Basic Tables start -->
+			<div class="row">
+				<div class="col-12">
+					<!-- Responsive tables end -->
+                    <conversation-details-widget
+                        [artifactData]="uiController['data']"
+                        (eventEmitter)="uiController['onTaskEvent']($event)" >
+                    </conversation-details-widget>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END: Content-->
